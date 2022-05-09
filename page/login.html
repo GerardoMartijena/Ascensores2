@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../css/main.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <title>home</title>
+</head>
+<body>
+    <header>
+        <ul class="nav justify-content-end">
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../page/ascensores.html">Ascensores</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../page/escaleras.html">Escaleras Mecanicas</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " href="../page/login.html">Iniciar Secion</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " href="../page/registro.html" >Registrarse</a>
+            </li>
+        </ul>
+        <h1 class="container header__titulo">Ascensores</h1>
+        <h1 class="container header__titulo1">Mar Del Plata</h1>
+    </header>
+    <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="../index.html">Inicio</a></li>
+            <li class="breadcrumb-item active" aria-current="page">IniciarSecion</li>
+        </ol>
+    </nav>
+    <section>
+        <article class="container">
+            <form>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1">
+                </div>
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Recordarme</label>
+                </div>
+                <button type="submit" class="btn btn-primary">Iniciar Secion</button>
+            </form>
+        </article>
+        <a class="container" href="../page/registro.html">Registrarse?</a>
+    </section>
+    <footer>
+        <nav class="nav flex-column">
+            <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
+            <a class="nav-link" href="../page/ascensores.html">Ascensores</a>
+            <a class="nav-link" href="../page/escaleras.html">Escaleras</a>
+            <a class="nav-link" href="../page/login.html">IniciarSesion</a>
+            <a class="nav-link" href="../page/registro.html">Registrarse</a>
+        </nav>
+        <p class="footer__texto">© 2022 Ascensores Mar Del Plata. Reservados todos los derechos</p>
+    </footer>
+</body>
+<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+</html>
