@@ -306,6 +306,8 @@ body section article .escaleras__2 {
     display: none; }
   body section .ascensores__small .row .imagen {
     display: none; }
+    body section .ascensores__small .row .imagen img {
+      display: none; }
   body section .ascensores__small .row .texto h3 {
     font-size: 25px; }
   body section .ascensores__small .row .texto p {
