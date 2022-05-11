@@ -281,7 +281,7 @@ body section article .escaleras__2 {
                         animation: focus-in-expand 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
                     } */ }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 914px) {
   body header {
     height: auto; }
     body header .header__titulo {
