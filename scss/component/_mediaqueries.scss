@@ -1,18 +1,14 @@
 @media screen and (max-width:768px){
     body{
         header{
-            height: 100px;
+            height: auto;
             .header__titulo{
-                grid-row: 3/10;
-                h1{
-                    font-size: 20px;
-                }
+                grid-row: 3/9;
+                font-size: 20px;
             }
             .header__titulo1{
-                grid-row: 5/7;
-                h1{
-                    font-size: 20px; 
-                }
+                grid-row: 5/9;
+                font-size: 20px; 
             }
             .nav{
                 display: none ; 
