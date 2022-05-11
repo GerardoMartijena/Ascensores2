@@ -6,16 +6,22 @@ body{
         background-repeat: no-repeat;
         background-size: cover;
         border-bottom: 2px solid #7b192c;
-        .nav{
-            grid-area: nav;
-            grid-column: 1/11 ;
-            grid-row: 1/2;
-            background-color: rgba(0, 0, 0, 0.233);
-            a{
-                color: aliceblue;
-                font-size: 20px;
+            .nav{
+                padding: 0px;
+                grid-area: nav;
+                grid-column: 1/11 ;
+                grid-row: 1/2;
+                padding: 10px;
+                width: 100%;
+                background-color: rgba(0, 0, 0, 0.233);
+                a{
+                    color: aliceblue;
+                    font-size: 20px;
+                }
             }
-        }
+            .navbar2{
+                display: none;
+            }
         .header__titulo{
             animation-name: ascensores;
             position: relative;
@@ -43,3 +49,10 @@ body{
         background-image: url("../multimedia/images/ascensores9.jpeg");
     }
 }
+/* @media screen and (max-width: 768px){
+    body{
+        header{
+            display: none ; 
+        }
+    }
+} */

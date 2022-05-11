@@ -12,13 +12,18 @@ body header {
   background-size: cover;
   border-bottom: 2px solid #7b192c; }
   body header .nav {
+    padding: 0px;
     grid-area: nav;
     grid-column: 1/11;
     grid-row: 1/2;
+    padding: 10px;
+    width: 100%;
     background-color: rgba(0, 0, 0, 0.233); }
     body header .nav a {
       color: aliceblue;
       font-size: 20px; }
+  body header .navbar2 {
+    display: none; }
   body header .header__titulo {
     animation-name: ascensores;
     position: relative;
@@ -43,6 +48,13 @@ body .header__escaleras {
 body .header__ascensores {
   background-image: url("../multimedia/images/ascensores9.jpeg"); }
 
+/* @media screen and (max-width: 768px){
+    body{
+        header{
+            display: none ; 
+        }
+    }
+} */
 body footer {
   border-top: 2px solid #7b192c; }
   body footer .nav {
@@ -152,6 +164,8 @@ article .grid__ascensores {
     article .grid__ascensores .ascensores__texto .ascensores__txt {
       padding-left: 40px;
       font-size: 19px; }
+    article .grid__ascensores .ascensores__texto .ascensores__img {
+      width: 100%; }
   article .grid__ascensores .ascensores__texto :hover {
     animation-name: ascensores;
     position: relative;
@@ -262,3 +276,60 @@ body section article .escaleras__2 {
     /*  .escalera__vermas :hover{
                         animation: focus-in-expand 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
                     } */ }
+
+@media screen and (max-width: 768px) {
+  body header {
+    height: 100px; }
+    body header .header__titulo {
+      grid-row: 3/10; }
+      body header .header__titulo h1 {
+        font-size: 20px; }
+    body header .header__titulo1 {
+      grid-row: 5/7; }
+      body header .header__titulo1 h1 {
+        font-size: 20px; }
+    body header .nav {
+      display: none; }
+    body header .navbar2 {
+      padding-left: 6px;
+      display: grid;
+      grid-area: nav;
+      grid-column: 1/11;
+      grid-row: 1/2; }
+      body header .navbar2 .navbar-toggler {
+        border: none;
+        background-color: white;
+        /* background-color:aliceblue; */ }
+  body nav {
+    display: none; }
+  body article {
+    padding-top: 20px;
+    height: auto; }
+    body article .grid__ascensores {
+      padding-right: 20px; }
+      body article .grid__ascensores .ascensores__texto {
+        background-image: url("../multimedia/images/ascensores19.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        grid-row: 1/11;
+        grid-column: 2/11; }
+        body article .grid__ascensores .ascensores__texto .ascensores__titulo {
+          background-color: rgba(255, 255, 255, 0.603); }
+        body article .grid__ascensores .ascensores__texto .ascensores__txt {
+          background-color: rgba(255, 255, 255, 0.603); }
+      body article .grid__ascensores .ascensores {
+        display: none; }
+    body article .grid__escaleras {
+      padding-right: 20px; }
+      body article .grid__escaleras .escaleras__texto {
+        background-image: url("../multimedia/images/escaleras9.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        grid-row: 1/11;
+        grid-column: 2/11; }
+        body article .grid__escaleras .escaleras__texto .escaleras__titulo {
+          background-color: rgba(255, 255, 255, 0.603); }
+        body article .grid__escaleras .escaleras__texto .escaleras__txt {
+          background-color: rgba(255, 255, 255, 0.603); }
+      body article .grid__escaleras .escaleras {
+        display: none; } }

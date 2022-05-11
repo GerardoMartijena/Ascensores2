@@ -1,0 +1,79 @@
+@media screen and (max-width:768px){
+    body{
+        header{
+            height: 100px;
+            .header__titulo{
+                grid-row: 3/10;
+                h1{
+                    font-size: 20px;
+                }
+            }
+            .header__titulo1{
+                grid-row: 5/7;
+                h1{
+                    font-size: 20px; 
+                }
+            }
+            .nav{
+                display: none ; 
+            }
+            .navbar2{
+                .navbar-toggler{
+                    border: none;
+                    background-color: white;
+                    /* background-color:aliceblue; */
+                }
+                padding-left: 6px;
+                display: grid;
+                grid-area: nav;
+                grid-column: 1/11 ;
+                grid-row: 1/2;
+            }
+        }
+        nav{
+            display: none;
+        }
+        article{
+            padding-top: 20px;
+            height: auto;
+            .grid__ascensores{
+                padding-right: 20px;
+                .ascensores__texto{
+                    background-image: url("../multimedia/images/ascensores19.jpg");
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    grid-row: 1/11;
+                    grid-column: 2/11;
+                    .ascensores__titulo{
+                        background-color:rgba(255, 255, 255, 0.603);
+                    }
+                    .ascensores__txt{
+                        background-color: rgba(255, 255, 255, 0.603);
+                    }
+                }
+                .ascensores{
+                    display: none;
+                }
+                }
+                .grid__escaleras{
+                    padding-right: 20px;
+                    .escaleras__texto{
+                        background-image: url("../multimedia/images/escaleras9.jpg");
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        grid-row: 1/11;
+                        grid-column: 2/11;
+                        .escaleras__titulo{
+                            background-color:rgba(255, 255, 255, 0.603);
+                        }
+                        .escaleras__txt{
+                            background-color: rgba(255, 255, 255, 0.603);
+                        }
+                    }
+                    .escaleras{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
