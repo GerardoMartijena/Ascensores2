@@ -29,6 +29,26 @@
         nav{
             display: none;
         }
+        section{
+            .ascensores__small{
+                div{
+                    .imagen{
+                        display: none;
+                    }
+                    .texto{
+                        h3{
+                            font-size: 25px;
+                        }
+                        p{
+                            font-size: 15px;
+                        }
+                        .imagen1{
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
         article{
             padding-top: 20px;
             height: auto;

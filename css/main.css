@@ -216,6 +216,10 @@ article .grid__escaleras {
 
 body section .ascensores__small {
   margin: 50px; }
+  body section .ascensores__small div .imagen {
+    display: block; }
+  body section .ascensores__small div .texto .imagen1 {
+    display: none; }
 
 body section .col {
   border-left: 3px solid #7b192c; }
@@ -300,6 +304,14 @@ body section article .escaleras__2 {
         /* background-color:aliceblue; */ }
   body nav {
     display: none; }
+  body section .ascensores__small div .imagen {
+    display: none; }
+  body section .ascensores__small div .texto h3 {
+    font-size: 25px; }
+  body section .ascensores__small div .texto p {
+    font-size: 15px; }
+  body section .ascensores__small div .texto .imagen1 {
+    display: block; }
   body article {
     padding-top: 20px;
     height: auto; }
