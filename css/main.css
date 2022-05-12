@@ -286,7 +286,10 @@ body section article .escaleras__2 {
 
 @media screen and (max-width: 914px) {
   body header {
-    height: auto; }
+    position: fixed;
+    top: 0px;
+    height: auto;
+    z-index: 100; }
     body header .header__titulo {
       grid-row: 3/9;
       font-size: 20px; }
@@ -301,6 +304,8 @@ body section article .escaleras__2 {
       grid-area: nav;
       grid-column: 1/11;
       grid-row: 1/2; }
+      body header .navbar2 .navbar-brand {
+        display: none; }
       body header .navbar2 .navbar-toggler {
         border: none;
         background-color: rgba(255, 255, 255, 0.685);
