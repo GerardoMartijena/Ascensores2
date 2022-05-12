@@ -107,3 +107,28 @@
             }
         }
     }
+    @media screen and (max-width:600px){
+        body{
+            margin: 100px;
+            footer{
+            display: none;
+        }
+        }
+        
+    }
+    @media screen and (max-width:212px) {
+        body{
+            header{
+                min-height: 200px;
+                .header__titulo{
+                    display: none;
+                }
+                .header__titulo1{
+                    display: none;
+                }
+            }
+            footer{
+                display: none;
+            }
+        }
+    }
