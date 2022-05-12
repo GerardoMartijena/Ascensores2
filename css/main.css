@@ -6,7 +6,7 @@
 
 body header {
   width: 100%;
-  height: auto;
+  max-height: 600px;
   background-image: url("../multimedia/images/Skyscrapers-buildings-city-view_3840x2160.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -158,68 +158,68 @@ body footer {
     filter: blur(0px);
     opacity: 1; } }
 
-article .grid__ascensores {
+body article .grid__ascensores {
   grid-column: 1/2;
   grid-row: 1/2; }
-  article .grid__ascensores .ascensores__texto {
+  body article .grid__ascensores .ascensores__texto {
     overflow-y: scroll;
     border-left: 2px solid #7b192c;
     grid-row: 2/3;
     grid-column: 7/11; }
-    article .grid__ascensores .ascensores__texto .ascensores__titulo {
+    body article .grid__ascensores .ascensores__texto .ascensores__titulo {
       padding-left: 40px;
       padding-bottom: 30px;
       padding-top: 30px; }
-    article .grid__ascensores .ascensores__texto .ascensores__txt {
+    body article .grid__ascensores .ascensores__texto .ascensores__txt {
       padding-left: 40px;
       font-size: 19px; }
-    article .grid__ascensores .ascensores__texto .ascensores__img {
+    body article .grid__ascensores .ascensores__texto .ascensores__img {
       width: 100%; }
-  article .grid__ascensores .ascensores__texto :hover {
+  body article .grid__ascensores .ascensores__texto :hover {
     animation-name: ascensores;
     position: relative;
     animation-duration: 2s;
     background-color: #ff764977;
     background-size: cover;
     height: 100%; }
-  article .grid__ascensores .ascensores {
+  body article .grid__ascensores .ascensores {
     padding-left: 10px;
     grid-column: 1/3;
     grid-row: 2/3; }
-    article .grid__ascensores .ascensores .ascensores__img {
+    body article .grid__ascensores .ascensores .ascensores__img {
       width: 600%;
       height: 100%;
       max-height: 600px;
       padding: 30px; }
 
-article .grid__escaleras {
+body article .grid__escaleras {
   grid-column: 1/2;
   grid-row: 2/3; }
-  article .grid__escaleras .escaleras__texto {
+  body article .grid__escaleras .escaleras__texto {
     overflow-y: scroll;
     max-height: 600px;
     border-right: 2px solid #7b192c;
     grid-row: 1/2;
     grid-column: 1/4; }
-    article .grid__escaleras .escaleras__texto .escaleras__titulo {
+    body article .grid__escaleras .escaleras__texto .escaleras__titulo {
       padding-bottom: 30px;
       padding-top: 30px; }
-    article .grid__escaleras .escaleras__texto .escaleras__txt {
+    body article .grid__escaleras .escaleras__texto .escaleras__txt {
       padding-right: 10px;
       font-size: 19px; }
-  article .grid__escaleras .escaleras__texto :hover {
+  body article .grid__escaleras .escaleras__texto :hover {
     animation-name: ascensores;
     position: relative;
     animation-duration: 2s;
     background-color: #d3423583;
     background-size: cover;
     height: 100%; }
-  article .grid__escaleras .escaleras {
+  body article .grid__escaleras .escaleras {
     height: 600px;
     padding: 10px;
     grid-column: 4/11;
     grid-row: 1/2; }
-    article .grid__escaleras .escaleras .escaleras__img {
+    body article .grid__escaleras .escaleras .escaleras__img {
       height: 100%;
       max-height: 600px; }
 
