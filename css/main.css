@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Signika+Negative:wght@500&display=swap");
 * {
   padding: 0px;
   margin: 0px;
@@ -294,6 +295,22 @@ body section article .escaleras__2 {
                         animation: focus-in-expand 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
                     } */ }
 
+body h3 {
+  font-size: 40px;
+  font-family: 'Signika Negative', sans-serif; }
+
+body .btn {
+  background-color: #7b192c;
+  border-color: #7b192c; }
+
+body .carrusel {
+  height: 800px;
+  max-height: 800px; }
+  body .carrusel img {
+    height: 800px; }
+  body .carrusel .carousel-caption {
+    background-color: rgba(0, 0, 0, 0.363); }
+
 @media screen and (max-width: 914px) {
   body header {
     height: auto;
@@ -369,10 +386,8 @@ body section article .escaleras__2 {
     margin-top: 82px; } }
 
 @media screen and (max-width: 600px) {
-  body {
-    margin: 100px; }
-    body footer {
-      display: none; } }
+  body footer {
+    display: none; } }
 
 @media screen and (max-width: 212px) {
   body header {

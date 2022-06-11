@@ -1,0 +1,23 @@
+body{
+    h3{
+            font-size: 40px;
+            @import url('https://fonts.googleapis.com/css2?family=Signika+Negative:wght@500&display=swap');
+            font-family: 'Signika Negative', sans-serif;
+        }
+        .btn{
+            background-color: #7b192c;
+            border-color: #7b192c;
+        }
+
+    .carrusel{
+        height: 800px;
+        max-height: 800px;
+        img{
+            height: 800px;
+        }
+        .carousel-caption{
+            background-color: rgba(0, 0, 0, 0.363);
+        }
+        
+    }
+}
