@@ -125,7 +125,6 @@ const pedirProducto=()=>{
         for (const articulo of articulos) {
             console.log(articulo.nombre);
             console.log(articulo.precio);
-            console.log(articulo.cantidad);
         }
         selecProducto=prompt(`
                 selecione el articulo que quiere comprar
