@@ -26,7 +26,7 @@ let valorCuotas=0;
 let totalFinal=0;
 //Funcion
 class compra{
-    constructor(producto, cantidad, precio,descuento,cuotas){
+    constructor(producto, cantidad, precio, descuento, cuotas){
         this.producto=producto.toUpperCase();
         this.precioProducto=Number(precio);
         this.totalFinal=0;
@@ -152,8 +152,7 @@ const pedirCuotas=()=>{
             do{
                 ingresarCuotas=prompt(`Ingrese el numero de cuotas que desea pagar`);
             }while((isNaN(ingresarCuotas))|| (ingresarCuotas==0))
-        
-    }
+        }
     }
     else if(quiereCuotas==false){
         ingresarCuotas=1;
@@ -187,4 +186,3 @@ do{
     agregarProducto=confirm(`Quiere agregar otro producto?`);
 }while(agregarProducto==true)
 mostrarTotal();
-
