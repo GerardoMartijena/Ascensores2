@@ -78,7 +78,7 @@ const agregarAlCarro=(selecProducto,selecCantidad)=>{
         }
     }
     else{
-        let agregarArticulo=confirm(`El prodcuto no se encuntra quiere agregarlo?`);
+        let agregarArticulo=confirm(`El producto no se encuntra en stock quiere agregarlo?`);
         if(agregarArticulo==true){
             let totalId=articulos.length;
             let id=totalId++;
@@ -104,7 +104,7 @@ const calcularCuotas=(cuotas)=>{
 const mostrarTotal=()=>{
     if(selecCuotas==1){
         alert(`
-            El total de su es: ${total}$
+            El total de su compra es: ${total}$
         `);
     }
     else{
@@ -112,9 +112,13 @@ const mostrarTotal=()=>{
     }
 }
 const verCarrito=()=>{
-    console.log(`Productos en el carrito`);
+    console.log(`Productos en el carrito
+    
+    `);
     for (const articulo of carrito) {
-        console.log(`Producto:`);
+        console.log(`Producto:
+        
+        `);
         console.log(articulo.nombre);
         console.log(articulo.cantidad);
         console.log(articulo.precio+` c/u`);
@@ -127,9 +131,12 @@ const pedirProducto=()=>{
             console.log(articulo.precio);
         }
         selecProducto=prompt(`
-                selecione el articulo que quiere comprar
+                selecione el articulo de la consola (f12) que quiere comprar.
 
-                Para dejar de comprar ingrese:
+                Si el producto que busca no lo encuentra puede agregarlo a 
+                nuestro stock e ingresarle un precio.
+
+                Para dejar de comprar o recargar la pagina ingrese:
                 "cancelar" o "dejar de comprar"
                 `);
                 if(selecProducto==null || selecProducto=="" || selecProducto==0){
