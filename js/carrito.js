@@ -96,10 +96,12 @@ const calcularTotal=()=>{
     carrito.forEach(producto=>{
         total+=(producto.cantidad*producto.precio);
     })
-    return total;
+    return Math.round(total);
 }
 const calcularCuotas=(cuotas)=>{
     totalCuotas=total/cuotas;
+    totalCuotas=Math.round(totalCuotas);
+    return totalCuotas;
 }
 const mostrarTotal=()=>{
     if(selecCuotas==1){
@@ -112,38 +114,43 @@ const mostrarTotal=()=>{
     }
 }
 const verCarrito=()=>{
-    console.log(`Productos en el carrito
+    console.log(`
+    
+    Productos en el carrito:
     
     `);
     for (const articulo of carrito) {
-        console.log(`Producto:
-        
+        console.log(`
+        Producto: ${articulo.nombre},
+        Cantidad: ${articulo.cantidad},
+        Precio:${articulo.precio}$ c/u
+
         `);
-        console.log(articulo.nombre);
-        console.log(articulo.cantidad);
-        console.log(articulo.precio+` c/u`);
     }
 }
 const pedirProducto=()=>{
+    for (const articulo of articulos) {
+        console.log(`
+        ${articulo.nombre} : ${articulo.precio}`);
+    }
     do{
-        for (const articulo of articulos) {
-            console.log(articulo.nombre);
-            console.log(articulo.precio);
-        }
         selecProducto=prompt(`
-                selecione el articulo de la consola (f12) que quiere comprar.
+            Selecione el articulo de la consola (f12) que quiere comprar.
 
-                Si el producto que busca no lo encuentra puede agregarlo a 
-                nuestro stock e ingresarle un precio.
+            Si el producto que busca no lo encuentra puede agregarlo 
+            a nuestro stock e ingresarle un precio.
 
-                Para dejar de comprar o recargar la pagina ingrese:
-                "cancelar" o "dejar de comprar"
+            Si abrio la consola y no ve nuestros productos ingrese
+            cancelar y recarge la pagina
+
+            Para dejar de comprar o recargar la pagina ingrese:
+            "cancelar" o "dejar de comprar"
                 `);
                 if(selecProducto==null || selecProducto=="" || selecProducto==0){
-                    console.log(`No ingresaste ningun dato`);
+                    alert(`No ingresaste ningun dato`);
                 }
                 else if((!isNaN(selecProducto))){
-                    console.log(`Ingresaste un numero`);
+                    alert(`Ingresaste un numero`);
                 }
     }while(!isNaN(selecProducto))
     
@@ -154,11 +161,11 @@ const pedirCantidad=()=>{
             Ingrese la cantidad que quiere llevar:
         `));
         if(selecCantidad==0){
-            console.log(`No ingresaste ninguna cantidad, vuelve a intenrarlo`);
+            alert(`No ingresaste ninguna cantidad, vuelve a intenrarlo`);
             selecCantidad=NaN;
         }
         else if(isNaN(selecCantidad)){
-            console.log(`No ingresaste un Numero`);
+            alert(`No ingresaste un Numero`);
         }
     }while(isNaN(selecCantidad))
 }
@@ -166,11 +173,11 @@ const pedirCuotas=()=>{
     do{
     selecCuotas=Number(prompt(`Ingrese la cantidad de cuotas que desea pagar`));
         if(selecCuotas==0){
-            console.log(`No ingresaste ninguna cantidad, vuelve a intenrarlo`);
+            alert(`No ingresaste ninguna cantidad, vuelve a intenrarlo`);
             selecCuotas=NaN;
         }
         else if(isNaN(selecCuotas)){
-            console.log(`No ingresaste un Numero`);
+            alert(`No ingresaste un Numero`);
         }
     }while(isNaN(selecCuotas))
 }
@@ -184,7 +191,7 @@ const pedirCuotas=()=>{
         pedirCantidad();
         agregarAlCarro(selecProducto,selecCantidad);
         verCarrito();
-        console.log(`Total del carrito `+calcularTotal());
+        alert(`Total del carrito `+calcularTotal());
         volverAComprar=confirm(`Quiere Agregar otro Producto?`);
         if(volverAComprar==false){
             break;
