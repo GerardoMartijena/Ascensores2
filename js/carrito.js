@@ -116,12 +116,12 @@ const calcularCuotas=(cuotas)=>{
 const mostrarTotal=()=>{
     let mostrarCarritoHtml=document.getElementById("lista__cards")
     if(selecCuotas==1){
-        let p=document.createElement("p");
+        let p=document.createElement("h1");
         p.innerText=`El total de su compra es: ${total}$`
         mostrarCarritoHtml.appendChild(p);
     }
     else{
-        let p=document.createElement("p");
+        let p=document.createElement("h1");
         p.innerText=`El total de su compra es ${total}$ en ${selecCuotas} cuotas de ${totalCuotas}$`
         mostrarCarritoHtml.appendChild(p);
     }
