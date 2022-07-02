@@ -12,49 +12,57 @@ const articulos=[
         id:0,
         nombre:"azucar",
         precio:141,
-        cantidad:0
+        cantidad:0,
+        img:`../multimedia/images/7792540260138_02.webp`
     },
     {
         id:1,
         nombre:"arroz",
         precio:173,
-        cantidad:0
+        cantidad:0,
+        img:`../multimedia/images/7702511000014.jpg`
     },
     {
         id:2,
         nombre:"harina",
         precio:125,
-        cantidad:0
+        cantidad:0,
+        img:`../multimedia/images/3fa9702fd03f1ffbb831fffeba101fb5.1500.0.0.0.wmark.6a856457.jpg`
     },
     {
         id:3,
         nombre:"fideos",
         precio:125,
-        cantidad:0
+        cantidad:0,
+        img:`../multimedia/images/20080120.webp`
     },
     {
         id:4,
         nombre:"leche",
         precio:117,
-        cantidad:0
+        cantidad:0,
+        img:`../multimedia/images/leche-entera-Veronica-Lt-300x300.jpg`
     },
     {
         id:5,
         nombre:"aceite",
         precio:370,
-        cantidad:0
+        cantidad:0,
+        img:`../multimedia/images/8822174941214.jpg`
     },
     {
         id:6,
         nombre:"queso",
         precio:370,
-        cantidad:0
+        cantidad:0,
+        img:`../multimedia/images/20193458.webp`
     },
     {
         id:7,
         nombre:"huevos",
         precio:370,
-        cantidad:0
+        cantidad:0,
+        img:`../multimedia/images/yumurta--15li-vira--mediumyumurta-4cb5.jpg`
     }
 ];
 const carrito=[];
@@ -67,8 +75,8 @@ let volverAComprar=true;
 //Funciones
 const agregarAlCarro=(selecProducto,selecCantidad)=>{
     let producto=articulos.find(producto=>producto.nombre===selecProducto);
-    let yaEnCarrito=carrito.find(producto=>producto.nombre===selecProducto);
     if(producto){
+        let yaEnCarrito=carrito.find(producto=>producto.nombre===selecProducto);
         if(yaEnCarrito){
             yaEnCarrito.cantidad+=selecCantidad;
         }
@@ -85,8 +93,10 @@ const agregarAlCarro=(selecProducto,selecCantidad)=>{
             let precio=Number(prompt(`Ingrece el precio de ${selecProducto}`));
             let articuloNuevo=new productoAgregado(selecProducto,0,id,precio);
             articulos.push(articuloNuevo);
+            producto=articulos.find(producto=>producto.nombre===selecProducto);
+            producto.cantidad=selecCantidad;
             articuloNuevo.cantidad=selecCantidad;
-            carrito.push(articuloNuevo);
+            carrito.push(producto);
             /* carrito.push(new productoAgregado(selecProducto, selecCantidad,id,precio)); */
         }
     }
@@ -104,29 +114,35 @@ const calcularCuotas=(cuotas)=>{
     return totalCuotas;
 }
 const mostrarTotal=()=>{
+    let mostrarCarritoHtml=document.getElementById("lista__cards")
     if(selecCuotas==1){
-        alert(`
-            El total de su compra es: ${total}$
-        `);
+        let p=document.createElement("p");
+        p.innerText=`El total de su compra es: ${total}$`
+        mostrarCarritoHtml.appendChild(p);
     }
     else{
-        alert(`El total de su compra es ${total}$ en ${selecCuotas} cuotas de ${totalCuotas}$`);
+        let p=document.createElement("p");
+        p.innerText=`El total de su compra es ${total}$ en ${selecCuotas} cuotas de ${totalCuotas}$`
+        mostrarCarritoHtml.appendChild(p);
     }
 }
 const verCarrito=()=>{
-    console.log(`
-    
-    Productos en el carrito:
-    
-    `);
-    for (const articulo of carrito) {
-        console.log(`
-        Producto: ${articulo.nombre},
-        Cantidad: ${articulo.cantidad},
-        Precio:${articulo.precio}$ c/u
-
-        `);
-    }
+    let listaCards=document.getElementById("lista__cards")
+for (const producto of carrito) {
+    let card=document.createElement("section");
+    card.innerHTML=`
+    <div class="card" style="width: 18rem;">
+    <img src="${producto.img}" class="card-img-top" alt="...">
+    <div class="card-body">
+    <h5 class="card-title">${producto.nombre}</h5>
+    <p class="card-text">${producto.precio}$ ${producto.cantidad} Unidades</p>
+    <a href="#" class="btn btn-primary">Agregar al Carrito</a>
+    </div>
+</div>
+</div>
+    `;
+    listaCards.appendChild(card);
+}
 }
 const pedirProducto=()=>{
     for (const articulo of articulos) {
@@ -181,6 +197,7 @@ const pedirCuotas=()=>{
         }
     }while(isNaN(selecCuotas))
 }
+
 //Logica
     do{
         pedirProducto();
@@ -190,7 +207,6 @@ const pedirCuotas=()=>{
         }
         pedirCantidad();
         agregarAlCarro(selecProducto,selecCantidad);
-        verCarrito();
         alert(`Total del carrito `+calcularTotal());
         volverAComprar=confirm(`Quiere Agregar otro Producto?`);
         if(volverAComprar==false){
@@ -200,6 +216,7 @@ const pedirCuotas=()=>{
     if(volverAComprar==false){
         pedirCuotas();
         calcularCuotas(selecCuotas);
+        verCarrito();
         mostrarTotal();
     }
 console.log(`gracias por visitar nuestra tienda`);
