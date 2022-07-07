@@ -311,6 +311,40 @@ body .carrusel {
   body .carrusel .carousel-caption {
     background-color: rgba(0, 0, 0, 0.363); }
 
+.grilla__tienda {
+  display: grid;
+  grid-template-rows: repeat(10, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: "headerTienda headerTienda headerTienda" "botones botones botones" "productos productos productos"; }
+
+body .header__tienda {
+  grid-area: headerTienda; }
+  body .header__tienda .navbar {
+    margin-right: 95%; }
+    body .header__tienda .navbar .color {
+      background-color: rgba(0, 0, 0, 0.341); }
+
+body .botones {
+  grid-area: botones; }
+
+body .carrito {
+  grid-area: carrito; }
+
+body .productos {
+  grid-area: productos; }
+
+body .footer__tienda {
+  grid-area: footer; }
+
+body article section .card {
+  margin: 30px; }
+
+body .ocultar {
+  display: none; }
+
+body .mostrar {
+  display: block; }
+
 @media screen and (max-width: 914px) {
   body header {
     height: auto;

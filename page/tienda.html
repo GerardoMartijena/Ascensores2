@@ -9,10 +9,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="../css/main.css" rel="stylesheet" type="text/css" />
         <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+        
         <title>Ascensores Mar del Plata - Instalaciones - Mantenimineto</title>
     </head>
-    <body>
-        <header class="header__ascensores">
+    <body >
+        <header class="header__tienda">
             <ul class="nav justify-content-end">
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
@@ -30,59 +31,36 @@
                     <a class="nav-link " href="../page/registro.html" >Registrarse</a>
                 </li>
             </ul>
-            <nav class=" navbar navbar-light fixed-top navbar2 ">
+            <nav class=" navbar  navbar-dark  fixed-top ">
                 <a class="navbar-brand" href="#"></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-                <span class="navbar-toggler-icon"></span>
+                <button class="navbar-toggler color" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                <span class=""><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart2" viewBox="0 0 16 16">
+            <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"/>
+        </svg></span>
                 </button>
-                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
                     <div class="offcanvas-header">
-                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Carrito</h5>
                         <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
-                    <div class="offcanvas-body">
-                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="../page/ascensores.html">Ascensores</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="../page/escaleras.html">Escaleras Mecanicas</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="../page/login.html">Iniciar sesion</a>
-                            </li>
-                            <li class="nav-item ">
-                                <a class="nav-link" href="../page/registro.html">Registrarse</a>
-                            </li>
-                        </ul>
+                    <div id="cards__carrito" class="offcanvas-body">
+                        
                     </div>
                 </div>
             </nav>
-            <h1 class="container header__titulo">Ascensores</h1>
-            <h1 class="container header__titulo1">Mar Del Plata</h1>
+            <h1 class="container header__titulo">Tienda</h1>
+            <h1 class="container header__titulo1">Productos</h1>
             <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
-        </ol>
-    </nav>
+            </nav>
         </header>
-        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="../index.html">Inicio</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Tienda</li>
-            </ol>
-        </nav>
-        <h1>Carrito</h1>
-        <article id="lista__cards">
+        <!-- <article class="botones">
+            <button type="button" id="btnVerCarrito" class="btn btn-primary btn-lg">Ver Carrito</button>
+            <button type="button" id="btnCerrar" class="btn btn-primary btn-lg ocultar">Cerrar Carrito</button>
+        </article> -->
+        <article id="lista__cards" class="productos">
 
         </article>
-        <article id="mostrar__Total">
-
-        </article>
-        <footer>
+        <footer class="footer__tienda">
         <nav class="nav flex-column">
             <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
             <a class="nav-link" href="../page/ascensores.html">Ascensores</a>
@@ -100,6 +78,6 @@
         </div>
         </footer>
         <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
-        <script src="../js/carrito.js"></script>
+        <script src="../js/productos.js"></script>
     </body>
 </html>

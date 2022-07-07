@@ -1,0 +1,45 @@
+.grilla__tienda{
+    display: grid;
+    grid-template-rows: repeat(10,1fr);
+    grid-template-columns: repeat(3,1fr);
+    grid-template-areas:
+"headerTienda headerTienda headerTienda"
+"botones botones botones"
+"productos productos productos";
+}
+body{
+    .header__tienda{
+        grid-area: headerTienda;
+        .navbar{
+            margin-right:95%;
+            .color{
+                background-color: rgba(0, 0, 0, 0.341);
+            }
+        }
+    }
+    .botones{
+        grid-area: botones;
+    }
+    .carrito{
+        grid-area: carrito;
+    }
+    .productos{
+        grid-area: productos;
+    }
+    .footer__tienda{
+        grid-area: footer;
+    }
+    article{
+        section{
+            .card{
+                margin: 30px;
+            }
+        }
+    }
+    .ocultar{
+        display: none;
+    }
+    .mostrar{
+        display: block;
+    }
+}
