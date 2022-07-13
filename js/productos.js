@@ -56,7 +56,6 @@ const articulos=[
         img:`../multimedia/images/yumurta--15li-vira--mediumyumurta-4cb5.jpg`
     }
 ];
-
 let carrito=[];
 let total=0;
 
@@ -66,7 +65,8 @@ const cardsCarrito=()=>{
     articleCarrito.innerHTML=`
     <h5>Total: ${total}</h5>
     <button id="btnVaciarCarrito" class="btn btn-primary btnEliminar" type="submit">Vaciar Carrito</button>
-    <p></p>`
+    <button id="guardarCarrito" class="btn btn-primary btnEliminar" type="submit">Guardar Carrito</button>
+    <button id="carritosGuardados" class="btn btn-primary btnEliminar" type="submit">Ver Carritos Guardados</button>`
     for (const producto of carrito) {
         let sectionCarrito=document.createElement("section");
         sectionCarrito.innerHTML=`
@@ -86,6 +86,8 @@ const cardsCarrito=()=>{
         restarCantidad(producto.id);
         vaciarCarrito();
     }
+    guardarCarrito();
+    verCarritosGuardados();
 }
 const agregarAlCarro=(id)=>{
     let producto=articulos.find(articulos=>articulos.id===id);
@@ -174,10 +176,35 @@ const vaciarCarrito=()=>{
         calcularTotal();
         cardsCarrito();
     });
+};
+const guardarCarrito=()=>{
+    let numCarrito=localStorage.length+1;
+    const botonGuardar=document.getElementById(`guardarCarrito`);
+    botonGuardar.addEventListener("click",()=>{
+        localStorage.setItem(`carrito${numCarrito}`,JSON.stringify(carrito));
+    });
+};
+const verCarritosGuardados=()=>{
+    const btnCarritosGuardados=document.getElementById(`carritosGuardados`);
+    btnCarritosGuardados.addEventListener("click",()=>{
+        let articleCarrito=document.getElementById('cards__carrito');
+        articleCarrito.innerHTML=``;
+        for(let i=1;i<=localStorage.length;i++){
+            let tituloSection=document.createElement('div');
+            tituloSection.innerHTML=`
+            <p>Carrito numero ${i}</p>
+            `
+            articleCarrito.appendChild(tituloSection);
+            let carritoLStorage=JSON.parse(localStorage.getItem(`carrito${i}`));
+            console.log(carritoLStorage);
+            for (const producto of carritoLStorage){
+                let sectionCarrito=document.createElement("div");
+                sectionCarrito.innerHTML=`
+                <p>${producto.nombre}</p>
+                `;
+                articleCarrito.appendChild(sectionCarrito);
+            };
+        };
+    });
 }
-
 mostrarProductos(articulos);
-
-
-
-
